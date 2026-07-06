@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | SwiftFox Integrated Services</title>
+<meta name="description" content="Get in touch with SwiftFox Integrated Services for security, housekeeping, facility management and manpower solutions across India.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-row wrap">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="SwiftFox Integrated Services crest logo">
+      <span class="lockup">SWIFTFOX<br><small>Integrated Services</small></span>
+    </a>
+    <div class="nav-desktop">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-cta" onclick="openModal()">Enquire Now</button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="industries.html">Industries</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="nav-cta" onclick="openModal()">Enquire Now</button>
+  </div>
+</header>
+
+<section class="page-hero" style="min-height:40vh;">
+  <img class="hero-photo" src="assets/images/contact-office.jpg" alt="SwiftFox office">
+  <div class="page-hero-inner wrap">
+    <span class="eyebrow">Contact Us</span>
+    <h1>Let's talk about <span>your site.</span></h1>
+    <p class="lede">Fill in the form below or call us directly — our team responds within 24 hours.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="split" style="align-items:flex-start;">
+      <div>
+        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">Request a Callback</span>
+        <h2 style="margin-bottom:10px;">Get a customized proposal</h2>
+        <p style="color:var(--steel); margin-bottom:26px;">Tell us about your site and requirements — no obligation, no generic rate card.</p>
+
+        <form data-enquiry-form data-success-target="pageFormSuccess" novalidate>
+          <div class="form-row-2">
+            <div class="field" data-wrap="name">
+              <label for="pname">Full Name</label>
+              <input type="text" id="pname" data-field="name" placeholder="e.g. Rohan Mehta" autocomplete="name">
+              <div class="field-error">Please enter your name.</div>
+            </div>
+            <div class="field" data-wrap="phone">
+              <label for="pphone">Phone Number</label>
+              <input type="tel" id="pphone" data-field="phone" placeholder="98765 43210" autocomplete="tel" inputmode="numeric">
+              <div class="field-error">Please enter a valid phone number.</div>
+            </div>
+          </div>
+          <div class="field" data-wrap="email">
+            <label for="pemail">Email</label>
+            <input type="email" id="pemail" data-field="email" placeholder="you@company.com" autocomplete="email">
+            <div class="field-error">Please enter a valid email.</div>
+          </div>
+          <div class="field">
+            <label for="pservice">Service Interested In</label>
+            <select id="pservice" data-field="service">
+              <option value="Security Services">Security Services</option>
+              <option value="Housekeeping Solutions">Housekeeping Solutions</option>
+              <option value="Facility Management">Facility Management</option>
+              <option value="Manpower Solutions">Manpower Solutions</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit">Submit Enquiry</button>
+          <p class="form-fine">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
+        </form>
+
+        <div class="form-success" id="pageFormSuccess">
+          <div class="check">✓</div>
+          <h3>Enquiry received</h3>
+          <p>Thanks — our team will reach out within 24 hours to discuss your requirements.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-card">
+          <div class="row"><span class="k mono">ADDRESS</span><span class="v">808B, 8th Floor, DLF Prime Towers, Pocket F, Okhla Phase-I, Okhla Industrial Estate, New Delhi – 110020</span></div>
+          <div class="row"><span class="k mono">PHONE</span><span class="v">+91-9971789770</span></div>
+          <div class="row"><span class="k mono">EMAIL</span><span class="v">info@swiftfox.in</span></div>
+          <div class="row"><span class="k mono">HOURS</span><span class="v">Mon – Sat, 9:00 AM – 7:00 PM</span></div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=Okhla+Industrial+Estate+Phase+1+New+Delhi&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="SwiftFox office location map"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="SwiftFox logo"><span>SwiftFox</span></div>
+        <p style="max-width:280px;">Integrated security, housekeeping, facility management and manpower solutions across India.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About Us</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="services.html#security">Security</a></li><li><a href="services.html#housekeeping">Housekeeping</a></li><li><a href="services.html#facility">Facility Mgmt</a></li><li><a href="services.html#manpower">Manpower</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li>+91-9971789770</li><li>info@swiftfox.in</li><li>New Delhi, India</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SwiftFox Integrated Services Pvt. Ltd.</span>
+      <span class="mono">NEW DELHI · PAN-INDIA DEPLOYMENT</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/form-config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

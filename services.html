@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | SwiftFox Integrated Services</title>
+<meta name="description" content="Security, housekeeping, facility management and manpower solutions from SwiftFox Integrated Services — trained, compliant, supervised personnel across India.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-row wrap">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="SwiftFox Integrated Services crest logo">
+      <span class="lockup">SWIFTFOX<br><small>Integrated Services</small></span>
+    </a>
+    <div class="nav-desktop">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-cta" onclick="openModal()">Enquire Now</button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="industries.html">Industries</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="nav-cta" onclick="openModal()">Enquire Now</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <img class="hero-photo" src="assets/images/about-hero.jpg" alt="SwiftFox operations team">
+  <div class="page-hero-inner wrap">
+    <span class="eyebrow">What We Do</span>
+    <h1>Four service lines, <span>one operating standard.</span></h1>
+    <p class="lede">Every SwiftFox deployment — whatever the vertical — runs on the same foundation: trained personnel, structured supervision and clear reporting.</p>
+  </div>
+</section>
+
+<section id="security">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-photo"><img src="assets/images/security-service.jpg" alt="Security guard on patrol at a corporate site"></div>
+      <div class="split-text">
+        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">01 / Security Services</span>
+        <h2>Trained protection for every site type</h2>
+        <p>From corporate lobbies to industrial perimeters, our guards are police-verified, uniformed and briefed on site-specific protocols before day one.</p>
+        <ul class="check-list">
+          <li>Armed and unarmed security guards</li>
+          <li>Access control and visitor management</li>
+          <li>Patrolling, perimeter checks and CCTV monitoring support</li>
+          <li>Emergency response and fire-safety readiness</li>
+          <li>Event and corporate security deployments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="housekeeping">
+  <div class="wrap">
+    <div class="split reverse">
+      <div class="split-photo"><img src="assets/images/housekeeping-service.jpg" alt="Housekeeping staff cleaning an office facility"></div>
+      <div class="split-text">
+        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">02 / Housekeeping Solutions</span>
+        <h2>Consistent hygiene, on a fixed schedule</h2>
+        <p>Our housekeeping teams work to written checklists and rotating deep-clean schedules, so standards don't drift between inspections.</p>
+        <ul class="check-list">
+          <li>Daily office and commercial cleaning</li>
+          <li>Deep cleaning and periodic sanitation</li>
+          <li>Floor care, washroom hygiene and waste management</li>
+          <li>Hospital-grade cleaning protocols where required</li>
+          <li>Uniformed, trained housekeeping staff</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facility">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-photo"><img src="assets/images/facility-service-2.jpg" alt="Facility management technician performing maintenance"></div>
+      <div class="split-text">
+        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">03 / Facility Management</span>
+        <h2>The operational layer behind the building</h2>
+        <p>Maintenance, utilities and vendor coordination handled by one team, so nothing falls through the cracks between contractors.</p>
+        <ul class="check-list">
+          <li>Building and utility maintenance</li>
+          <li>Front-office and reception support</li>
+          <li>Landscaping and grounds upkeep</li>
+          <li>Third-party vendor coordination</li>
+          <li>Scheduled facility audits and reporting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="manpower">
+  <div class="wrap">
+    <div class="split reverse">
+      <div class="split-photo"><img src="assets/images/manpower-service.jpg" alt="SwiftFox manpower staff team briefing"></div>
+      <div class="split-text">
+        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">04 / Manpower Solutions</span>
+        <h2>Staffing that scales with you</h2>
+        <p>Skilled, semi-skilled and unskilled workforce provided on flexible terms — without the overhead of direct hiring, payroll or compliance management.</p>
+        <ul class="check-list">
+          <li>Skilled technical and support staff</li>
+          <li>Semi-skilled operational personnel</li>
+          <li>General unskilled workforce for peak demand</li>
+          <li>Flexible scaling up or down by season or project</li>
+          <li>Full statutory compliance handled on your behalf</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Frequently Asked</span>
+      <h2>Common questions about our services</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Do you provide services outside Delhi NCR?</summary>
+        <div class="faq-body">Yes — SwiftFox deploys personnel across India on a PAN-India basis. Reach out with your site location and we'll confirm coverage and lead time.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can we combine multiple services under one contract?</summary>
+        <div class="faq-body">Yes, this is our core model. Most clients combine security, housekeeping and facility management under a single account team rather than managing separate vendors.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How quickly can guards or staff be deployed?</summary>
+        <div class="faq-body">Typical deployment timelines range from a few days to two weeks depending on headcount, role specifications and site verification requirements.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Are your personnel compliant with labour law requirements?</summary>
+        <div class="faq-body">Yes. All deployed personnel are covered under EPF, ESI, Minimum Wages Act and Contract Labour Regulations, with documentation available for client audits.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <h2 style="margin-bottom:16px;">Not sure which service fits your site?</h2>
+    <p style="color:var(--steel); max-width:520px; margin:0 auto 26px;">Tell us a bit about your operations and we'll recommend the right combination of services.</p>
+    <a href="contact.html" class="btn-primary">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="SwiftFox logo"><span>SwiftFox</span></div>
+        <p style="max-width:280px;">Integrated security, housekeeping, facility management and manpower solutions across India.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About Us</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="services.html#security">Security</a></li><li><a href="services.html#housekeeping">Housekeeping</a></li><li><a href="services.html#facility">Facility Mgmt</a></li><li><a href="services.html#manpower">Manpower</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li>+91-9971789770</li><li>info@swiftfox.in</li><li>New Delhi, India</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SwiftFox Integrated Services Pvt. Ltd.</span>
+      <span class="mono">NEW DELHI · PAN-INDIA DEPLOYMENT</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card">
+    <span class="badge-corner mono">Enquiry Form</span>
+    <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    <div class="modal-body" id="modalBody">
+      <span class="m-tag">Request a Callback</span>
+      <h3>Get a customized proposal</h3>
+      <p class="sub">Share your details — our team responds within 24 hours with a service plan for your site.</p>
+      <form data-enquiry-form novalidate>
+        <div class="field" data-wrap="name">
+          <label for="name2">Full Name</label>
+          <input type="text" id="name2" data-field="name" placeholder="e.g. Rohan Mehta" autocomplete="name">
+          <div class="field-error">Please enter your name.</div>
+        </div>
+        <div class="field" data-wrap="email">
+          <label for="email2">Email</label>
+          <input type="email" id="email2" data-field="email" placeholder="you@company.com" autocomplete="email">
+          <div class="field-error">Please enter a valid email.</div>
+        </div>
+        <div class="field" data-wrap="phone">
+          <label for="phone2">Phone Number</label>
+          <input type="tel" id="phone2" data-field="phone" placeholder="98765 43210" autocomplete="tel" inputmode="numeric">
+          <div class="field-error">Please enter a valid phone number.</div>
+        </div>
+        <div class="field">
+          <label for="service2">Service Interested In</label>
+          <select id="service2" data-field="service">
+            <option value="Security Services">Security Services</option>
+            <option value="Housekeeping Solutions">Housekeeping Solutions</option>
+            <option value="Facility Management">Facility Management</option>
+            <option value="Manpower Solutions">Manpower Solutions</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Submit Enquiry</button>
+        <p class="form-fine">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
+      </form>
+    </div>
+    <div class="modal-body form-success" id="modalSuccess">
+      <div class="check">✓</div>
+      <h3>Enquiry received</h3>
+      <p>Thanks — our team will reach out within 24 hours to discuss your requirements.</p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/form-config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
