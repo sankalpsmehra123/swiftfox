@@ -237,12 +237,14 @@
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-card">
-    <span class="badge-corner mono">Enquiry Form</span>
-    <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <span class="badge-corner mono">Enquiry Form</span>
+      <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    </div>
     <div class="modal-body" id="modalBody">
       <span class="m-tag">Request a Callback</span>
       <h3>Get a customized proposal</h3>
-      <p class="sub">Share your details — our team responds within 24 hours with a service plan for your site.</p>
+      <p class="sub">Share your details — our team will arrange a callback with a service plan for your site.</p>
       <form data-enquiry-form novalidate>
         <div class="field" data-wrap="name">
           <label for="name">Full Name</label>
@@ -259,15 +261,17 @@
           <input type="tel" id="phone" data-field="phone" placeholder="98765 43210" autocomplete="tel" inputmode="numeric">
           <div class="field-error">Please enter a valid phone number.</div>
         </div>
-        <div class="field">
+        <div class="field" data-wrap="service">
           <label for="service">Service Interested In</label>
-          <select id="service" data-field="service">
+          <select id="service" data-field="service" required>
+            <option value="">Select a service</option>
             <option value="Security Services">Security Services</option>
             <option value="Housekeeping Solutions">Housekeeping Solutions</option>
             <option value="Facility Management">Facility Management</option>
             <option value="Manpower Solutions">Manpower Solutions</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>
+          <div class="field-error">Please select a service.</div>
         </div>
         <button type="submit" class="form-submit">Submit Enquiry</button>
         <p class="form-fine">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
@@ -276,7 +280,7 @@
     <div class="modal-body form-success" id="modalSuccess">
       <div class="check">✓</div>
       <h3>Enquiry received</h3>
-      <p>Thanks — our team will reach out within 24 hours to discuss your requirements.</p>
+      <p>Thanks — our team will connect with you to discuss your requirements.</p>
     </div>
   </div>
 </div>

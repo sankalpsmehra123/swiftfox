@@ -48,7 +48,7 @@
   <div class="page-hero-inner wrap">
     <span class="eyebrow">Contact Us</span>
     <h1>Let's talk about <span>your site.</span></h1>
-    <p class="lede">Fill in the form below or call us directly — our team responds within 24 hours.</p>
+    <p class="lede">Fill in the form below or call us directly — our team will arrange a callback with a service plan for your site.</p>
   </div>
 </section>
 
@@ -78,15 +78,17 @@
             <input type="email" id="pemail" data-field="email" placeholder="you@company.com" autocomplete="email">
             <div class="field-error">Please enter a valid email.</div>
           </div>
-          <div class="field">
+          <div class="field" data-wrap="service">
             <label for="pservice">Service Interested In</label>
-            <select id="pservice" data-field="service">
+            <select id="pservice" data-field="service" required>
+              <option value="">Select a service</option>
               <option value="Security Services">Security Services</option>
               <option value="Housekeeping Solutions">Housekeeping Solutions</option>
               <option value="Facility Management">Facility Management</option>
               <option value="Manpower Solutions">Manpower Solutions</option>
               <option value="Not sure yet">Not sure yet</option>
             </select>
+            <div class="field-error">Please select a service.</div>
           </div>
           <button type="submit" class="form-submit">Submit Enquiry</button>
           <p class="form-fine">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
@@ -95,7 +97,7 @@
         <div class="form-success" id="pageFormSuccess">
           <div class="check">✓</div>
           <h3>Enquiry received</h3>
-          <p>Thanks — our team will reach out within 24 hours to discuss your requirements.</p>
+          <p>Thanks — our team will connect with you to discuss your requirements.</p>
         </div>
       </div>
 
@@ -143,6 +145,56 @@
     </div>
   </div>
 </footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card">
+    <div class="modal-header">
+      <span class="badge-corner mono">Enquiry Form</span>
+      <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <span class="m-tag">Request a Callback</span>
+      <h3>Get a customized proposal</h3>
+      <p class="sub">Share your details — our team will arrange a callback with a service plan for your site.</p>
+      <form data-enquiry-form novalidate>
+        <div class="field" data-wrap="name">
+          <label for="name5">Full Name</label>
+          <input type="text" id="name5" data-field="name" placeholder="e.g. Rohan Mehta" autocomplete="name">
+          <div class="field-error">Please enter your name.</div>
+        </div>
+        <div class="field" data-wrap="email">
+          <label for="email5">Email</label>
+          <input type="email" id="email5" data-field="email" placeholder="you@company.com" autocomplete="email">
+          <div class="field-error">Please enter a valid email.</div>
+        </div>
+        <div class="field" data-wrap="phone">
+          <label for="phone5">Phone Number</label>
+          <input type="tel" id="phone5" data-field="phone" placeholder="98765 43210" autocomplete="tel" inputmode="numeric">
+          <div class="field-error">Please enter a valid phone number.</div>
+        </div>
+        <div class="field" data-wrap="service">
+          <label for="service5">Service Interested In</label>
+          <select id="service5" data-field="service" required>
+            <option value="">Select a service</option>
+            <option value="Security Services">Security Services</option>
+            <option value="Housekeeping Solutions">Housekeeping Solutions</option>
+            <option value="Facility Management">Facility Management</option>
+            <option value="Manpower Solutions">Manpower Solutions</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+          <div class="field-error">Please select a service.</div>
+        </div>
+        <button type="submit" class="form-submit">Submit Enquiry</button>
+        <p class="form-fine">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
+      </form>
+    </div>
+    <div class="modal-body form-success" id="modalSuccess">
+      <div class="check">✓</div>
+      <h3>Enquiry received</h3>
+      <p>Thanks — our team will reach to discuss your requirements.</p>
+    </div>
+  </div>
+</div>
 
 <script src="assets/js/form-config.js"></script>
 <script src="assets/js/main.js"></script>
