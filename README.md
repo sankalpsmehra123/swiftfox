@@ -70,7 +70,18 @@ Because this is a bespoke, high-performance static website, **do not use GoDaddy
 
 ---
 
-## 🎨 3. Key Design Choices & Enhancements
+## 💻 3. Local Development & Preview
+
+Because the enquiry forms submit via JavaScript using `fetch` APIs, it is highly recommended to serve the website using a local web server rather than opening HTML files directly from your file system. This ensures scripts execute with proper security origins and fetch resolves perfectly.
+
+Here are a few quick options to preview the site locally:
+- **VS Code**: Install the **Live Server** extension and click **Go Live** at the bottom-right corner.
+- **Python (v3)**: Open your terminal in the project directory, run `python -m http.server 8000`, and open `http://localhost:8000` in your browser.
+- **Node.js / NPM**: Run `npx http-server -p 8000` in the project directory, and open `http://localhost:8000` in your browser.
+
+---
+
+## 🎨 4. Key Design Choices & Enhancements
 
 * **Warm Physical Brand Palette**: Modeled as a premium physical workforce company. Utilizes deep inks, warm stones, slate blues, and structural brick reds. No digital grid lines or CCTV scanner overlays, reading as a disciplined, human-first enterprise.
 * **Photography & Assets**: All photography is optimized, compressed (`<300kb`), and mapped directly to its respective service cards and industry matrices from official corporate documents.
@@ -79,7 +90,7 @@ Because this is a bespoke, high-performance static website, **do not use GoDaddy
 
 ---
 
-## 📖 4. Comprehensive Technical Documentation
+## 📖 5. Comprehensive Technical Documentation
 
 For an in-depth breakdown of the styling variables, page layouts, form submit validations, mobile responsive menus, and customization workflows, please consult the:
 

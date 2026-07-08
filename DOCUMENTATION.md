@@ -77,24 +77,32 @@ The site is built with a **Vanilla Web Stack**:
 
 The visual identity of SwiftFox is defined entirely inside `assets/css/style.css`. It avoids bloated utility CSS libraries in favor of a fast-rendering, clean CSS hierarchy.
 
-### A. Color Palette (CSS Variables)
+### A. Color Palette & Typography Tokens (CSS Variables)
 ```css
 :root {
-  --color-stone: #f8f6f2;   /* Main light background color */
-  --color-ink: #111a24;     /* Deep navy/slate for typography and primary headers */
-  --color-brick: #b33925;   /* Accent red/crimson for CTAs, focus indicators, and tags */
-  --color-slate: #52627a;   /* Subtle grey-blue for secondary text and borders */
-  --color-white: #ffffff;   /* Pure white cards and container backgrounds */
-  --font-family-body: 'Work Sans', sans-serif;
-  --font-family-title: 'Barlow Condensed', sans-serif;
-  --font-family-mono: 'IBM Plex Mono', monospace;
+  --ink: #20291f;         /* deep pine-charcoal, header/footer/dark sections */
+  --ink-2: #2c3a29;       /* lighter ink for gradients/borders */
+  --stone: #efe9dc;       /* warm paper background */
+  --stone-2: #e4dcc9;     /* slightly deeper stone for section breaks */
+  --white: #fbfaf6;       /* clean card/container background */
+  --rust: #b2502e;        /* primary accent — brick/rust for CTAs and highlights */
+  --rust-dark: #933d21;   /* hover state for primary accent */
+  --moss: #4b6650;        /* verified / compliance green */
+  --charcoal: #241f19;    /* body text color */
+  --steel: #5c6459;       /* secondary text and borders */
+  --line: #d8cfba;        /* hairline borders on stone */
+  --line-dark: #3a4636;   /* hairline borders on dark ink sections */
+  --radius: 3px;          /* card border radius styling */
+  --font-body: 'Work Sans', sans-serif;
+  --font-title: 'Barlow Condensed', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 ```
 
 ### B. Typography Setup
-* **Headers (`h1`, `h2`, `h3`, `.eyebrow`)**: Use `Barlow Condensed` for a strong, authoritative, structured appearance appropriate for security and physical services.
-* **Body text**: Uses `Work Sans` for exceptionally clean legibility and modern proportions on mobile screens.
-* **Numeric metrics**: Uses `IBM Plex Mono` for the numbers inside the Trust Stats Bar and approach sequences, highlighting operational accuracy.
+* **Headers (`h1`, `h2`, `h3`, `.eyebrow`)**: Styled via `var(--font-title)` (`Barlow Condensed`) for an authoritative, structured corporate identity.
+* **Body text**: Styled via `var(--font-body)` (`Work Sans`) for clean legibility and proportions on mobile.
+* **Numeric metrics & labels**: Styled via `var(--font-mono)` (`IBM Plex Mono`) for statistics and progress indicators.
 
 ### C. Major CSS Structural Layouts
 * **`.wrap`**: Standard container capping the main content width at `1200px` with responsive padding on mobile.
