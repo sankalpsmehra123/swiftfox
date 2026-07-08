@@ -43,13 +43,13 @@
 
 window.SWIFTFOX_FORM_CONFIG = {
   // The long ID from your Google Form's pre-filled link (between /d/e/ and /viewform)
-  FORM_ID: "1FAIpQLSfi-z7b4G74K0Ck4QuFS3tSVgiBWvk5tHHeTL87EmJQIjq5YA",
+  FORM_ID: "1FAIpQLSeVCs8DfsImP8Ww-GSsNVKIES3E_DRrBa-U22z7_JGP-nEVOg",
 
   // The entry.XXXXXXXXXXX numbers from step 3 above, one per field
-  ENTRY_NAME:    "entry.1015531656",
-  ENTRY_EMAIL:   "entry.2066316494",
-  ENTRY_PHONE:   "entry.1240783789",
-  ENTRY_SERVICE: "entry.265472517",
+  ENTRY_NAME:    "entry.1798414361",
+  ENTRY_EMAIL:   "entry.910899042",
+  ENTRY_PHONE:   "entry.1627257704",
+  ENTRY_SERVICE: "entry.1986965979",
 
   // Allowed service options — must match the <option value="..."> list in the HTML
   SERVICE_OPTIONS: ["Security Services","Housekeeping Solutions","Facility Management","Manpower Solutions","Not sure yet"]
