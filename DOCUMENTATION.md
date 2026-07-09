@@ -26,7 +26,7 @@ The SwiftFox website is a modern, high-performance, 5-page static website design
 
 ### Key Features
 * **Multi-Page Static Layout**: Structured across 5 clean HTML pages to improve search engine optimization (SEO) and user navigation.
-* **Unified Design Language**: A sophisticated color scheme (stone, ink, brick, slate) representing reliability, professionalism, and physical presence rather than looking like a digital tech vendor.
+* **Unified Design Language**: A sophisticated color scheme (corporate blue, warm grey-orange, stone, steel-blue) representing reliability, professionalism, and physical presence rather than looking like a digital tech vendor.
 * **Seamless Enquiry Capture**: Integrated form submission directly to Google Sheets via Google Forms with robust client-side validation—no database or complex backend server required.
 * **Optimized for Mobile**: Built on fluid responsive styling with custom media queries.
 * **Strict Performance & Accessibility**: Zero third-party runtime frameworks (like React or Bootstrap), making it load instantly even on low-speed cellular connections.
@@ -80,18 +80,18 @@ The visual identity of SwiftFox is defined entirely inside `assets/css/style.css
 ### A. Color Palette & Typography Tokens (CSS Variables)
 ```css
 :root {
-  --ink: #20291f;         /* deep pine-charcoal, header/footer/dark sections */
-  --ink-2: #2c3a29;       /* lighter ink for gradients/borders */
+  --ink: #255194;         /* corporate blue — header/footer/dark sections */
+  --ink-2: #1a3c6e;       /* darker navy for gradients/borders */
   --stone: #efe9dc;       /* warm paper background */
   --stone-2: #e4dcc9;     /* slightly deeper stone for section breaks */
   --white: #fbfaf6;       /* clean card/container background */
-  --rust: #b2502e;        /* primary accent — brick/rust for CTAs and highlights */
-  --rust-dark: #933d21;   /* hover state for primary accent */
-  --moss: #4b6650;        /* verified / compliance green */
+  --rust: #bd6434;        /* warm grey-orange — primary accent for CTAs and highlights */
+  --rust-dark: #9a4f26;   /* hover state for primary accent */
+  --moss: #4a7ab5;        /* steel-blue — verified / compliance */
   --charcoal: #241f19;    /* body text color */
   --steel: #5c6459;       /* secondary text and borders */
   --line: #d8cfba;        /* hairline borders on stone */
-  --line-dark: #3a4636;   /* hairline borders on dark ink sections */
+  --line-dark: #1a3c6e;   /* hairline borders on blue sections */
   --radius: 3px;          /* card border radius styling */
   --font-body: 'Work Sans', sans-serif;
   --font-title: 'Barlow Condensed', sans-serif;
