@@ -37,7 +37,7 @@
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="industries.html">Industries</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
     <button class="nav-cta" onclick="openModal()">Enquire Now</button>
   </div>
@@ -57,7 +57,7 @@
     <div class="split reverse">
       <div class="split-photo"><img src="assets/images/office.jpg" alt="SwiftFox operations office"></div>
       <div class="split-text">
-        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">Who We Are</span>
+        <span class="tag-mono">Who We Are</span>
         <h2>Built for accountability, not just headcount</h2>
         <p>Most facility vendors specialize in one thing. SwiftFox was built to run security, housekeeping, facility management and manpower under a single account team — so clients deal with one point of contact instead of four separate contracts.</p>
         <p>Every deployment follows the same operating standard: trained personnel, documented SOPs, and regular supervision — regardless of which service line it falls under.</p>
@@ -104,7 +104,7 @@
     <div class="split">
       <div class="split-photo"><img src="assets/images/team-final.jpg" alt="SwiftFox field team"></div>
       <div class="split-text">
-        <span class="tag" style="font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--moss); text-transform:uppercase; letter-spacing:0.13em; display:block; margin-bottom:10px;">Our People</span>
+        <span class="tag-mono">Our People</span>
         <h2>Supervised, not just deployed</h2>
         <p>Every guard, housekeeper and technician works under a supervisor who visits the site regularly and reports back through a structured chain — so issues get caught before they become complaints.</p>
       </div>
@@ -148,12 +148,14 @@
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-card">
-    <span class="badge-corner mono">Enquiry Form</span>
-    <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <span class="badge-corner mono">Enquiry Form</span>
+      <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    </div>
     <div class="modal-body" id="modalBody">
       <span class="m-tag">Request a Callback</span>
       <h3>Get a customized proposal</h3>
-      <p class="sub">Share your details — our team responds within 24 hours with a service plan for your site.</p>
+      <p class="sub">Share your details — our team will arrange a callback with a service plan for your site.</p>
       <form data-enquiry-form novalidate>
         <div class="field" data-wrap="name">
           <label for="name4">Full Name</label>
@@ -170,15 +172,17 @@
           <input type="tel" id="phone4" data-field="phone" placeholder="98765 43210" autocomplete="tel" inputmode="numeric">
           <div class="field-error">Please enter a valid phone number.</div>
         </div>
-        <div class="field">
+        <div class="field" data-wrap="service">
           <label for="service4">Service Interested In</label>
-          <select id="service4" data-field="service">
+          <select id="service4" data-field="service" required>
+            <option value="">Select a service</option>
             <option value="Security Services">Security Services</option>
             <option value="Housekeeping Solutions">Housekeeping Solutions</option>
             <option value="Facility Management">Facility Management</option>
             <option value="Manpower Solutions">Manpower Solutions</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>
+          <div class="field-error">Please select a service.</div>
         </div>
         <button type="submit" class="form-submit">Submit Enquiry</button>
         <p class="form-fine">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
@@ -187,7 +191,7 @@
     <div class="modal-body form-success" id="modalSuccess">
       <div class="check">✓</div>
       <h3>Enquiry received</h3>
-      <p>Thanks — our team will reach out within 24 hours to discuss your requirements.</p>
+      <p>Thanks — our team will connect with you to discuss your requirements.</p>
     </div>
   </div>
 </div>

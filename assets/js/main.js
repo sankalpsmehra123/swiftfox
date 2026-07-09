@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---------- Form validation + Google Form submit ---------- */
+  var cfg = window.SWIFTFOX_FORM_CONFIG;
+
   function wireForm(form) {
     if (!form) return;
     form.addEventListener('submit', function (e) {
@@ -73,34 +75,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var phone = form.querySelector('[data-field="phone"]');
       var phoneWrap = form.querySelector('[data-wrap="phone"]');
-      var digits = phone.value.replace(/\D/g, '');
-      if (digits.length < 10) { phoneWrap.classList.add('invalid'); valid = false; }
+      var phoneDigits = phone.value.replace(/\D/g, '');
+      var phonePattern = /^[6-9]\d{9}$/;
+      if (!phonePattern.test(phoneDigits)) { phoneWrap.classList.add('invalid'); valid = false; }
       else { phoneWrap.classList.remove('invalid'); }
 
       var service = form.querySelector('[data-field="service"]');
+      var serviceWrap = form.querySelector('[data-wrap="service"]') || (service ? service.parentElement : null);
+      var allowedServices = cfg && Array.isArray(cfg.SERVICE_OPTIONS)
+        ? cfg.SERVICE_OPTIONS
+        : [];
+      var serviceValue = service ? service.value.trim() : '';
+      if (!serviceValue || (allowedServices.length && allowedServices.indexOf(serviceValue) === -1)) {
+        if (serviceWrap) serviceWrap.classList.add('invalid');
+        valid = false;
+      } else {
+        if (serviceWrap) serviceWrap.classList.remove('invalid');
+      }
 
       if (!valid) return;
+
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn ? submitBtn.textContent : 'Submit Enquiry';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      }
 
       submitToGoogleForm({
         name: name.value.trim(),
         email: email.value.trim(),
         phone: phone.value.trim(),
         service: service ? service.value : ''
+      }).then(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+
+        var isInModal = !!form.closest('#modalBody');
+        var successEl = isInModal ? null : document.getElementById(form.dataset.successTarget);
+
+        form.reset();
+
+        if (isInModal) {
+          modalBody.style.display = 'none';
+          modalSuccess.style.display = 'block';
+          setTimeout(window.closeModal, 2600);
+        } else if (successEl) {
+          form.style.display = 'none';
+          successEl.style.display = 'block';
+        }
+      }).catch(function (err) {
+        console.error('SwiftFox enquiry form: submission failed', err);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+        alert('Something went wrong. Please check your internet connection and try again.');
       });
-
-      var isInModal = !!form.closest('#modalBody');
-      var successEl = isInModal ? null : document.getElementById(form.dataset.successTarget);
-
-      form.reset();
-
-      if (isInModal) {
-        modalBody.style.display = 'none';
-        modalSuccess.style.display = 'block';
-        setTimeout(window.closeModal, 2600);
-      } else if (successEl) {
-        form.style.display = 'none';
-        successEl.style.display = 'block';
-      }
     });
   }
 
@@ -116,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
       console.warn('SwiftFox enquiry form: Google Form is not configured yet. ' +
         'Edit assets/js/form-config.js with your Form ID and entry IDs. ' +
         'Captured data (not sent):', data);
-      return;
+      return Promise.resolve();
     }
 
     var url = 'https://docs.google.com/forms/d/e/' + cfg.FORM_ID + '/formResponse';
@@ -126,13 +159,11 @@ document.addEventListener('DOMContentLoaded', function () {
     params.append(cfg.ENTRY_PHONE, data.phone);
     if (cfg.ENTRY_SERVICE && data.service) params.append(cfg.ENTRY_SERVICE, data.service);
 
-    fetch(url, {
+    return fetch(url, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: params.toString()
-    }).catch(function (err) {
-      console.error('SwiftFox enquiry form: submission failed', err);
     });
   }
 

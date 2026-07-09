@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GOOGLE FORM CONFIGURATION
+   GOOGLE FORM CONFIGURATION — SAMPLE / FILL-IN-TEMPLATE
    --------------------------------------------------------------------------
    This is the ONLY file you need to edit to connect the enquiry form
    to your own Google Form. Follow these steps:
@@ -16,25 +16,41 @@
    3. Copy that pre-filled link. It looks like:
       https://docs.google.com/forms/d/e/1FAIpQLSc.......XYZ/viewform?
         usp=pp_url&
-        entry.111111111=Test+Name&
-        entry.222222222=test%40email.com&
-        entry.333333333=9999999999&
-        entry.444444444=Security+Services
+        entry.1111111111=Test+Name&
+        entry.2222222222=test%40email.com&
+        entry.3333333333=9999999999&
+        entry.4444444444=Security+Services
 
    4. Paste the long ID (the part between /d/e/ and /viewform) below as FORM_ID.
-   5. Paste each "entry.XXXXXXXXX" number below, matching it to the right field.
+   5. Paste each "entry.XXXXXXXXXXX" number below, matching it to the right field.
 
    That's it — no server, no backend needed. The site POSTs directly to
    Google's form-response endpoint using a hidden fetch request.
+
+   --------------------------------------------------------------------------
+   Example (replace with your own values):
+
+    window.SWIFTFOX_FORM_CONFIG = {
+      FORM_ID:       "1FAIpQLSc...XYZ",
+      ENTRY_NAME:    "entry.1111111111",
+      ENTRY_EMAIL:   "entry.2222222222",
+      ENTRY_PHONE:   "entry.3333333333",
+      ENTRY_SERVICE: "entry.4444444444",
+      // Allowed service options — must match the <option value="..."> list in the HTML
+      SERVICE_OPTIONS: ["Security Services","Housekeeping Solutions","Facility Management","Manpower Solutions","Not sure yet"]
+    };
    ========================================================================== */
 
 window.SWIFTFOX_FORM_CONFIG = {
   // The long ID from your Google Form's pre-filled link (between /d/e/ and /viewform)
-  FORM_ID: "REPLACE_WITH_YOUR_GOOGLE_FORM_ID",
+  FORM_ID: "1FAIpQLSeVCs8DfsImP8Ww-GSsNVKIES3E_DRrBa-U22z7_JGP-nEVOg",
 
-  // The entry.XXXXXXXXX numbers from step 3 above, one per field
-  ENTRY_NAME:    "REPLACE_WITH_ENTRY_ID_FOR_NAME",
-  ENTRY_EMAIL:   "REPLACE_WITH_ENTRY_ID_FOR_EMAIL",
-  ENTRY_PHONE:   "REPLACE_WITH_ENTRY_ID_FOR_PHONE",
-  ENTRY_SERVICE: "REPLACE_WITH_ENTRY_ID_FOR_SERVICE"
+  // The entry.XXXXXXXXXXX numbers from step 3 above, one per field
+  ENTRY_NAME:    "entry.1798414361",
+  ENTRY_EMAIL:   "entry.910899042",
+  ENTRY_PHONE:   "entry.1627257704",
+  ENTRY_SERVICE: "entry.1986965979",
+
+  // Allowed service options — must match the <option value="..."> list in the HTML
+  SERVICE_OPTIONS: ["Security Services","Housekeeping Solutions","Facility Management","Manpower Solutions","Not sure yet"]
 };
