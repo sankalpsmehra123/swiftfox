@@ -68,7 +68,7 @@ a, button, .nav-cta, .btn-primary, .btn-ghost, .form-submit, .modal-close, input
   margin-bottom: 10px;
 }
 .tag-mono.rust {
-  color: var(--rust);
+  color: var(--stone);
 }
 
 /* ===== HEADER ===== */
@@ -79,7 +79,7 @@ header{
 }
 .nav-row{
   display:flex; align-items:center; justify-content:space-between;
-  padding:14px 32px;
+  padding-top:14px; padding-bottom:14px;
 }
 .logo{display:flex; align-items:center; gap:5px;}
 .logo img{width:55px;height:55px;flex-shrink:0;object-fit:contain;}
@@ -114,7 +114,7 @@ nav.main-nav a:hover, nav.main-nav a.active{color:var(--rust);}
 }
 .mobile-menu{
   display:none; flex-direction:column; background:var(--ink);
-  border-top:1px solid var(--line-dark); padding:10px 32px 20px;
+  border-top:1px solid var(--line-dark); padding:10px 20px 20px;
 }
 .mobile-menu.open{display:flex;}
 .mobile-menu a{color:#c9d6ea; padding:10px 0; font-size:0.95rem; text-transform:uppercase; letter-spacing:0.04em; border-bottom:1px solid var(--line-dark);}
@@ -135,15 +135,19 @@ nav.main-nav a:hover, nav.main-nav a.active{color:var(--rust);}
   content:''; position:absolute; inset:0;
   background:linear-gradient(180deg, rgba(37,81,148,0.35) 0%, rgba(37,81,148,0.92) 88%);
 }
-.page-hero-inner{position:relative; z-index:2; padding:70px 0 54px; width:100%;}
+.page-hero-inner{
+  position:relative; z-index:2;
+  padding-top:70px; padding-bottom:54px;
+  width:100%;
+}
 .eyebrow{
   display:inline-flex; align-items:center; gap:8px;
   font-family:var(--font-mono); font-size:0.72rem;
-  color:var(--rust); text-transform:uppercase; letter-spacing:0.14em;
+  color:var(--stone-2); text-transform:uppercase; letter-spacing:0.14em;
   margin-bottom:18px;
 }
 .eyebrow::before{
-  content:''; width:7px; height:7px; background:var(--rust); border-radius:50%;
+  content:''; width:7px; height:7px; background:var(--stone-2); border-radius:50%;
 }
 .page-hero h1{
   color:var(--white);
@@ -200,7 +204,7 @@ section{padding:80px 0;}
 .section-dark{background:var(--ink); color:var(--white);}
 .section-dark .section-head h2{color:var(--white);}
 .section-dark .section-head p{color:#b8c9e0;}
-.section-dark .section-head .tag{color:var(--rust);}
+.section-dark .section-head .tag{color:var(--stone);}
 
 /* ===== SERVICE / PHOTO CARDS ===== */
 .card-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
@@ -323,7 +327,7 @@ section{padding:80px 0;}
 .contact-card{background:var(--ink); color:var(--white); padding:30px; border-radius:var(--radius);}
 .contact-card .row{display:flex; gap:14px; margin-bottom:16px; align-items:flex-start;}
 .contact-card .row .k{
-  font-family:var(--font-mono); font-size:0.66rem; color:var(--rust);
+  font-family:var(--font-mono); font-size:0.66rem; color:var(--stone);
   text-transform:uppercase; letter-spacing:0.08em; width:68px; flex-shrink:0; margin-top:2px;
 }
 .contact-card .row .v{font-size:0.9rem; color:#d6e0ef;}
