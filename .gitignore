@@ -1,3 +1,9 @@
+# macOS metadata & resource fork sidecar files
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+
 # Compiled class file
 *.class
 
